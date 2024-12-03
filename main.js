@@ -1,8 +1,8 @@
 import XLSX from 'xlsx'
 import fs from 'node:fs/promises'
 
-let course = process.argv[2]
-let url = "data/november.xlsx"
+let filename = process.argv[2]
+let url = `data/${filename}.xlsx`
 let courses =(await fs.readFile('courseCodes', {encoding: 'utf8'})).trim().split("\n")
 let result = {}
 // result["grandTotal"] = 0
